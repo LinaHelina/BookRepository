@@ -1,0 +1,6 @@
+D:\Ангелина\University\6_sem\project\WebApplication2\Database1\bin\Debug\Database1.dacpac
+D:\Ангелина\University\6_sem\project\WebApplication2\Database1\bin\Debug\Database1.dll
+D:\Ангелина\University\6_sem\project\WebApplication2\Database1\bin\Debug\Database1.pdb
+D:\Ангелина\University\6_sem\project\WebApplication2\Database1\obj\Debug\Database1.sqlprojAssemblyReference.cache
+D:\Ангелина\University\6_sem\project\WebApplication2\Database1\obj\Debug\Database1.dll
+D:\Ангелина\University\6_sem\project\WebApplication2\Database1\obj\Debug\Database1.pdb

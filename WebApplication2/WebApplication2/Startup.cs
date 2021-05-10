@@ -12,8 +12,11 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc.NewtonsoftJson;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
 using Newtonsoft.Json.Serialization;
+using WebApplication2.Data;
+using WebApplication2.Services;
 
 namespace WebApplication2
 {
@@ -35,13 +38,15 @@ namespace WebApplication2
                     .AllowAnyHeader());
             });
 
+            services.AddDbContext<DataContext>(options => options.UseSqlServer(Configuration.GetConnectionString("BookRepositoryCon")));
+
             services.AddControllersWithViews()
                 .AddNewtonsoftJson(options =>
                     options.SerializerSettings.ReferenceLoopHandling = Newtonsoft
                         .Json.ReferenceLoopHandling.Ignore)
                 .AddNewtonsoftJson(options => options.SerializerSettings.ContractResolver
                     = new DefaultContractResolver());
-
+            services.AddScoped<IProductRepository, ProductRepository>();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
