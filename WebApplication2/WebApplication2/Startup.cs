@@ -41,6 +41,7 @@ namespace WebApplication2
                     .AllowAnyHeader());
             });
 
+            services.Configure<ApplicationSettings>(Configuration.GetSection("ApplicationSettings"));
             services.AddDbContext<DataContext>(options => options.UseSqlServer(Configuration.GetConnectionString("BookRepositoryCon")));
 
             services.AddControllersWithViews()
