@@ -20,7 +20,7 @@ namespace WebApplication2.Data
         public async Task<Customer> GetCustomer(string email)
         {
             // Fetch user by email 
-            var query_user = await _context.Customer.FirstOrDefaultAsync(xxx => xxx.Email == email);
+            var query_user = await _context.Customers.FirstOrDefaultAsync(xxx => xxx.Email == email);
             return query_user;
         }
 
@@ -43,15 +43,17 @@ namespace WebApplication2.Data
             // store password hashed for new customer
             newCustomer.PasswordHashed = hashed;
             newCustomer.PasswordSalt = salted;
+            newCustomer.CustomerId = 1;
             // add new customer to database
-            await _context.Customer.AddAsync(newCustomer);
-            await _context.SaveChangesAsync();
+            _context.Customers.Add(newCustomer);
+            var n= _context.SaveChanges();
+            var h = 1;
             return newCustomer;
         }
 
         public async Task<bool> UserExists(string email)
         {
-            if (await _context.Customer.AnyAsync(xxx => xxx.Email == email)) return true;
+            if (await _context.Customers.AnyAsync(xxx => xxx.Email == email)) return true;
             else return false;
         }
 

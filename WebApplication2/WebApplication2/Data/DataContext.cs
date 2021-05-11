@@ -13,7 +13,7 @@ namespace WebApplication2.Data
         private const string Connection =
             "Data Source=(local);Initial Catalog=DatabaseAAA;Integrated Security=True";
 
-        public DbSet<Customer> Customer { get; set; }
+        public DbSet<Customer> Customers { get; set; }
         public DbSet<Products> Products { get; set; }
         //public DbSet<ProductDetails> ProductDetails { get; set; }
 

@@ -47,6 +47,7 @@ namespace WebApplication2
                 .AddNewtonsoftJson(options => options.SerializerSettings.ContractResolver
                     = new DefaultContractResolver());
             services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped<IAuthentificationRepository, AuthentificationRepository>();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
