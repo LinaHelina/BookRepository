@@ -27,9 +27,8 @@ namespace WebApplication2.Data
 
         public async Task<ProductDetails> GetProductDetail(int id)
         {
-            //var detail = await _dataContext.ProductDetails.FirstOrDefaultAsync(x => x.ProductId == id);
-            //return detail;
-            return null;
+            var detail = await _dataContext.ProductDetails.FirstOrDefaultAsync(x => x.ProductDetailId == id);
+            return detail;
         }
     }
 }

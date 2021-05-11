@@ -15,7 +15,7 @@ namespace WebApplication2.Data
 
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Products> Products { get; set; }
-        //public DbSet<ProductDetails> ProductDetails { get; set; }
+        public DbSet<ProductDetails> ProductDetails { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -24,7 +24,7 @@ namespace WebApplication2.Data
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.SeedProducts();
+            //modelBuilder.SeedProducts();
             //modelBuilder.SeedProductDetails();
         }
 

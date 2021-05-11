@@ -11,6 +11,5 @@ namespace WebApplication2.Models
         public decimal ProductPrice { get; set; }
         public string ProductImageUrl { get; set; }
         public string ProductAuthor { get; set; }
-        public ICollection<ProductDetails> productDetails { get; set; }
     }
 }
