@@ -70,9 +70,9 @@ namespace WebApplication2.Controllers
                 }
             }*/
 
-            using var context = new BookRepositoryContext();
-            context.CategoryModels.Add(category);
-            context.SaveChanges();
+            //using var context = new BookRepositoryContext();
+            //context.CategoryModels.Add(category);
+            //context.SaveChanges();
 
 
             return new JsonResult("Added Successfully");

@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WebApplication2.Models
 {
@@ -12,6 +13,9 @@ namespace WebApplication2.Models
         public int Quantity { get; set; }
         public double SalePrice { get; set; }
         public int OrderId { get; set; }
+
+        [ForeignKey("OrderId")]
+        public Orders Orders { get; set; }
 
     }
 }

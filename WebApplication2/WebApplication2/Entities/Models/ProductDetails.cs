@@ -18,5 +18,8 @@ namespace WebApplication2.Models
         public int ProductId { get; set; }
         public string ProductName { get; set; }
         public string ProductImage { get; set; }
+
+        [ForeignKey("ProductId")]
+        public Products Products { get; set; }
     }
 }
