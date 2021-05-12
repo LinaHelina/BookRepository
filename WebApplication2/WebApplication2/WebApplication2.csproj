@@ -15,7 +15,6 @@
 
   <ItemGroup>
     <Folder Include="Covers\" />
-    <Folder Include="Entities\Helpers\" />
   </ItemGroup>
 
 </Project>
