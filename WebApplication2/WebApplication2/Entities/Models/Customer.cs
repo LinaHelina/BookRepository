@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace WebApplication2.Models
 {
@@ -12,5 +13,6 @@ namespace WebApplication2.Models
         public byte[] PasswordSalt { get; set; }
         public string Address { get; set; }
         public string City { get; set; }
+        public ICollection<CustomerShippingAddresses> CustomerShippingAddresses { get; set; }
     }
 }

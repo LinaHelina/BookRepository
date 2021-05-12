@@ -16,7 +16,8 @@ namespace WebApplication2.Models
         public double OrderTotal { get; set; }
         public int NumberOfItems { get; set; }
         public DateTime OrderDate { get; set; }
-        //public ICollection<OrderDetails> OrderDetails { get; set; }
+        
+        public ICollection<OrderDetails> OrderDetails { get; set; }
         public int CustomerId { get; set; }
     }
 }
