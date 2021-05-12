@@ -43,7 +43,6 @@ namespace WebApplication2.Data
             // store password hashed for new customer
             newCustomer.PasswordHashed = hashed;
             newCustomer.PasswordSalt = salted;
-            newCustomer.CustomerId = 1;
             // add new customer to database
             _context.Customers.Add(newCustomer);
             var n= _context.SaveChanges();
