@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fyFSXV/SFsyzdGv9rEC1GsehHYL+WXFIWSLjSQeJei5l276QZ4yTJOy3wZVVHDa6ZqzF8NSu3pI28ttGnU7TkA==",
+  "dgSpecHash": "bU7M9BvbrpMrN0TNNk+6iz+edNYy6IjSfTa8kz84kreXPFtkxoxSCnicVCktqL2O94eUjcmO7Jtb3Jr8Xaqv3A==",
   "success": true,
-  "projectFilePath": "d:\\Ангелина\\University\\6_sem\\project\\WebApplication2\\WebApplication2\\WebApplication2.csproj",
+  "projectFilePath": "D:\\Ангелина\\University\\6_sem\\project\\WebApplication2\\WebApplication2\\WebApplication2.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.5\\microsoft.aspnetcore.authentication.jwtbearer.5.0.5.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\5.0.5\\microsoft.aspnetcore.jsonpatch.5.0.5.nupkg.sha512",

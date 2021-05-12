@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\Ангелина\\University\\6_sem\\project\\WebApplication2\\WebApplication2\\WebApplication2.csproj": {}
+    "D:\\Ангелина\\University\\6_sem\\project\\WebApplication2\\WebApplication2\\WebApplication2.csproj": {}
   },
   "projects": {
-    "d:\\Ангелина\\University\\6_sem\\project\\WebApplication2\\WebApplication2\\WebApplication2.csproj": {
+    "D:\\Ангелина\\University\\6_sem\\project\\WebApplication2\\WebApplication2\\WebApplication2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\Ангелина\\University\\6_sem\\project\\WebApplication2\\WebApplication2\\WebApplication2.csproj",
+        "projectUniqueName": "D:\\Ангелина\\University\\6_sem\\project\\WebApplication2\\WebApplication2\\WebApplication2.csproj",
         "projectName": "WebApplication2",
-        "projectPath": "d:\\Ангелина\\University\\6_sem\\project\\WebApplication2\\WebApplication2\\WebApplication2.csproj",
+        "projectPath": "D:\\Ангелина\\University\\6_sem\\project\\WebApplication2\\WebApplication2\\WebApplication2.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "d:\\Ангелина\\University\\6_sem\\project\\WebApplication2\\WebApplication2\\obj\\",
+        "outputPath": "D:\\Ангелина\\University\\6_sem\\project\\WebApplication2\\WebApplication2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
