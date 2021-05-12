@@ -54,6 +54,7 @@ namespace WebApplication2
 
             services.AddScoped<IProductRepository, ProductRepository>();
             services.AddScoped<IAuthentificationRepository, AuthentificationRepository>();
+            services.AddScoped<IUserRepository, UserRepository>();
             services.AddControllers();
 
             //jwt authentication
