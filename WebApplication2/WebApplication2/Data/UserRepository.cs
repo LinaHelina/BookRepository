@@ -39,9 +39,9 @@ namespace WebApplication2.Data
             return user;
         }
 
-        public async void SaveAllChange()
+        public async Task<int> SaveAllChange()
         {
-            await _dataContext.SaveChangesAsync();
+            return await _dataContext.SaveChangesAsync();
         }
 
         public async Task<int> SaveHistory(Orders orders)

@@ -110,7 +110,7 @@ namespace WebApplication2.Controllers
                     itemtosave.OrderId = _repo.getLastestOrder();
                     _repo.updateOrderDetails(itemtosave);
                 }
-                _repo.SaveAllChange();
+                await _repo.SaveAllChange();
                 return Ok("save successful");
             }
             return BadRequest("save unsuccessfully");
@@ -160,8 +160,7 @@ namespace WebApplication2.Controllers
                 user.PasswordHashed = hashed;
                 user.PasswordSalt = salted;
             }
-
-            _repo.SaveAllChange();
+            var v =await _repo.SaveAllChange();
             return Ok("update successful");
         }
 

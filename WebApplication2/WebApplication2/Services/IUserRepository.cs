@@ -11,7 +11,7 @@ namespace WebApplication2.Services
         public Task<int> SaveHistory(Orders orders);
         public int getLastestOrder();
         public void updateOrderDetails(OrderDetails itemToSave);
-        public void SaveAllChange();
+        public Task<int> SaveAllChange();
         public Task<List<Orders>> GetOrderHistory(int id);
     }
 }
