@@ -9,10 +9,16 @@ namespace WebApplication2.Services
         public List<Products> GetAllProducts();
         public Task<Products> GetOneProduct(int id);
 
-        public Task<Products> AddProduct(Products product);
-        public Task<ProductDetails> AddProductDetails(ProductDetails details);
-        public void SaveChanges();
+        public Task<ProductDetails> GetOneProductDetail(int id);
 
-        
+        public Task<int> AddProduct(Products product);
+        public void AddProductDetails(ProductDetails details);
+        public Task<int> SaveChanges();
+
+        public int getLastestProduct();
+
+        public void Delete(Products product, ProductDetails productDetails);
+
+
     }
 }
