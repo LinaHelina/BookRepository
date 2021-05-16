@@ -60,5 +60,11 @@ namespace WebApplication2.Data
         {
             _dataContext.Products.Remove(product);
         }
+
+        public void UpdateInfo(Products products, ProductDetails productDetails)
+        {
+            _dataContext.Products.Update(products);
+            _dataContext.ProductDetails.Update(productDetails);
+        }
     }
 }

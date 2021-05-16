@@ -82,7 +82,7 @@ namespace WebApplication2.Controllers
             foreach (var item in order.detail)
             {
                 numberOfItems += item.quantity;
-                total += (item.ProductPrice * item.quantity) + ((item.ProductPrice * item.quantity) * 8.5 / 100);
+                total += (item.ProductPrice * item.quantity);
             }
             var ordertosave = new Orders();
             ordertosave.CustomerId = id;

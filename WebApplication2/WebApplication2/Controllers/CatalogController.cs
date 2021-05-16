@@ -32,6 +32,15 @@ namespace WebApplication2.Controllers
             return Ok(allProducts);
         }
 
+        [HttpGet("{id}")]
+        public ActionResult GetProduct(int id)
+        {
+            var details = _repo.GetOneProductDetail(id);
+            return Ok(details.Result);
+        }
+
+
+
         [HttpPost("AddProduct")]
         public async Task<IActionResult> AddProduct(ProductToSave product)
         {
@@ -90,6 +99,34 @@ namespace WebApplication2.Controllers
             }
         }
 
+        [HttpPut]
+        public async Task<IActionResult> UpdateBook(ProductToSave product)
+        {
+
+            var newProduct = await _repo.GetOneProduct(product.ProductId);
+            newProduct.ProductAuthor = product.Author;
+            newProduct.ProductName = product.Title;
+            newProduct.ProductPrice = product.Price;
+            newProduct.ProductImageUrl = @"http://localhost:16194/Covers/" + product.BookCover;
+
+            var details = await _repo.GetOneProductDetail(product.ProductId);
+            details.ShortDescription = product.Description;
+            details.PublicationDate = product.PublicationDate;
+            details.Category = product.Category;
+            details.IsbnNumber = product.ISBN;
+            details.PageAmount = product.PageAmount.ToString();
+            details.ProductLanguage = product.Language;
+            details.ProductImage = newProduct.ProductImageUrl;
+            details.Publisher = product.Publisher;
+            details.ProductName = product.Title;
+
+            _repo.UpdateInfo(newProduct,details);
+
+            await _repo.SaveChanges();
+
+            return Ok("save successful");
+
+        }
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)

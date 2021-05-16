@@ -17,6 +17,8 @@ namespace WebApplication2.Services
 
         public int getLastestProduct();
 
+        public void UpdateInfo(Products products, ProductDetails productDetails);
+
         public void Delete(Products product, ProductDetails productDetails);
 
 
