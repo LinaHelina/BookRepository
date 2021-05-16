@@ -142,24 +142,6 @@ namespace WebApplication2.Controllers
             if (usertoupdate.newaddress1 != "") user.Address = usertoupdate.newaddress1;
             if (usertoupdate.newcity != "") user.City = usertoupdate.newcity;
 
-            //create new pass hash & satl for new password
-            if (usertoupdate.newpassword != "")
-            {
-                byte[] salted = new byte[128 / 8];
-                using (var rng = RandomNumberGenerator.Create())
-                {
-                    rng.GetBytes(salted);
-                }
-                string hashed = Convert.ToBase64String(KeyDerivation.Pbkdf2(
-                      password: usertoupdate.newpassword,
-                      salt: salted,
-                      prf: KeyDerivationPrf.HMACSHA1,
-                      iterationCount: 10000,
-                      numBytesRequested: 256 / 8));
-
-                user.PasswordHashed = hashed;
-                user.PasswordSalt = salted;
-            }
             var v =await _repo.SaveAllChange();
             return Ok("update successful");
         }

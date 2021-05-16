@@ -111,7 +111,6 @@ namespace WebApplication2.Controllers
 
             var details = await _repo.GetOneProductDetail(product.ProductId);
             details.ShortDescription = product.Description;
-            details.PublicationDate = product.PublicationDate;
             details.Category = product.Category;
             details.IsbnNumber = product.ISBN;
             details.PageAmount = product.PageAmount.ToString();
