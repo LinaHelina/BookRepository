@@ -79,6 +79,9 @@ namespace WebApplication2.Migrations
                     b.Property<byte[]>("PasswordSalt")
                         .HasColumnType("varbinary(max)");
 
+                    b.Property<int>("Role")
+                        .HasColumnType("int");
+
                     b.HasKey("CustomerId");
 
                     b.ToTable("Customers");

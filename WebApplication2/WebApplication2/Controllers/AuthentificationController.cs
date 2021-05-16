@@ -68,7 +68,8 @@ namespace WebApplication2.Controllers
                 {
                     Subject = new ClaimsIdentity(new Claim[]
                     {
-                        new Claim("CustomerId", user.CustomerId.ToString())
+                        new Claim("CustomerId", user.CustomerId.ToString()),
+                        new Claim("CustomerRole", user.Role.ToString())
                     }),
                     Expires = DateTime.UtcNow.AddDays(1),
                     SigningCredentials = new SigningCredentials(

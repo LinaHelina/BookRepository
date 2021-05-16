@@ -13,6 +13,7 @@ namespace WebApplication2.Models
         public byte[] PasswordSalt { get; set; }
         public string Address { get; set; }
         public string City { get; set; }
+        public int Role { get; set; }
         public ICollection<Cart> Cart { get; set; }
         public ICollection<CustomerShippingAddresses> CustomerShippingAddresses { get; set; }
         public ICollection<Orders> Orders { get; set; }
